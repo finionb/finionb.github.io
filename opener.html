@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Gefährdete Lebewesen</title>
-  <link rel="stylesheet" type="text/css" href="./css/opener.css">
+  <title>Gefährdete Tierarten</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
-
 <body>
-  <img class="background" src="./img/opener-background.png">
-  
-  <div class="container">
-    <div class="containerIcons">
-      <a href="index.html">
-        <img class="iconTier" src="./img/Pfote-Icon.png">
-      </a>
-      <a href="index.html">
-        <img class="iconPflanze" src="./img/Blatt-Icon.png">
-      </a>
-    </div>
+
+  <div id="slideshow" class="background">
+    <img class="slide active" src="./img/background1.png">
+    <img class="slide" src="./img/background2.jpg">
+    <img class="slide" src="./img/background3.png">
+    <img class="slide" src="./img/background4.png">
+    <!-- Weitere Bilder hier hinzufügen -->
   </div>
 
-  <script src="./js/opener.js"></script>
+  <nav id="navigation">
+    <div id="icon">
+      <a href="index.html">
+      <img src="./img/logo.png">
+      </a>
+    </div>
+    <ul id="menu">
+      <li id="active"><a href="#">home</a></li>
+      <li><a href="total.html">total</a></li>
+      <li><a href="subtotal.html">subtotal</a></li>
+      <li><a href="dyk.html">dyk</a></li>
+    </ul>
+  </nav>
+
+  <div class="text-container">
+    <div class="text">
+      <p class="line1">Mehr als</p>
+      <h1 class="line2">10.000<span class="line3">TIERARTEN</span></h1>
+      <p class="line4">SIND VOM AUSSTERBEN BEDROHT</p>
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
+
+
