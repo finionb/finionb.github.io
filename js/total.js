@@ -85,3 +85,4 @@ var chart = new Chart(myChartObject, {
         }    
     }    
 });
+chart.legend.hoverCursor('pointer');
