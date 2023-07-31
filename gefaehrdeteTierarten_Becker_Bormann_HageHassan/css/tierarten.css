@@ -1,0 +1,369 @@
+body {
+  background-color: #0c0c0c;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Navigationsleiste */
+#navigation {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#icon img {
+  width: 17%;
+  height: auto;
+}
+
+#navigation #menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#navigation #menu li {
+  padding-left: 4vw; /* Anpassung der relativen Einheit */
+  padding-right: 1vw; /* Anpassung der relativen Einheit */
+  position: relative;
+}
+
+#navigation #menu li a {
+  color: white;
+  font-weight: lighter;
+  text-decoration: none;
+  font-size: 1.3vw;
+  position: relative;
+  padding: 0.5vw 1vw; /* Anpassung der relativen Einheit */
+  border-radius: 5vw;
+  transition: background-color 0.05s ease, color 0.05s ease;
+}
+
+#navigation #menu li:hover a,
+#navigation #menu #active a {
+  background-color: rgb(171, 0, 0);
+  text-decoration: none;
+}
+
+/* Diagramm: Buttons */
+#grid-container1 #buttons {
+  justify-content: center;
+  padding-top: 4vw;
+  padding-left: 4vw;
+}
+
+#buttons .activebutton {
+  border: 0.2vw solid rgba(223, 222, 222, 0.9);
+  background: rgba(223, 222, 222, 0.7);
+  padding: 0.4vw 2vw;
+  font-size: 1.1vw;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 12vw;
+  border-radius: 2vw;
+}
+
+#button-alle, 
+#button-säugetiere,
+#button-amphibien,
+#button-reptilien,
+#button-vögel,
+#button-fische,
+#button-insekten {
+  border: 2px solid rgba(223, 222, 222, 0.9);
+  background: none;
+  padding: 0.4vw 2vw;
+  font-size: 1.1vw;
+  color: rgba(223, 222, 222, 0.7);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 12vw;
+  border-radius: 2vw;
+}
+
+#button-alle:hover,
+#button-säugetiere:hover, 
+#button-amphibien:hover,
+#button-reptilien:hover,
+#button-vögel:hover,
+#button-fische:hover,
+#button-insekten:hover {
+  color: black;
+  background-color: rgba(223, 222, 222, 0.5);
+}
+
+#buttons button {
+  margin-top: 1.5vw;
+}
+
+/* Grid */
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1vw;
+}
+
+#grid-container1 {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: auto;
+  column-gap: 0;
+  row-gap: 0;
+  padding-left: 1vw;
+  padding-top: 5vw;
+}
+
+#item-1 {
+  grid-row: 1; 
+  grid-column: 2;
+}
+
+#item-2 {
+  grid-row: 2; 
+  grid-column: 2;
+}
+
+#item-3 {
+  grid-row: 3; 
+  grid-column: 2;
+}
+
+/* Bilder */
+.image-container.year2002 #year2002 {
+  width: 20vw;
+  height: auto;
+  margin-top: 12.5vw;
+  margin-left: 10.5vw;
+}
+
+.image-container.year2012 #year2012 {
+  width: 32vw;
+  height: auto;
+  margin-top: 2vw;
+  margin-left: 4.5vw;
+}
+
+.image-container.year2022 #year2022 {
+  width: 35vw;
+  height: auto;
+  margin-top: -1vw;
+  margin-left: 3vw;
+}
+  
+/* Timeline */
+.timeline {
+  width: 40vw;
+  margin-left: 31vw;
+  position: fixed;
+  top: 39vw;
+}
+  
+.timeline input[type="range"] {
+  width: 100%;
+}
+  
+.timeline-years {
+  margin-top: 1vw;
+  display: flex;
+  justify-content: space-between;
+}
+  
+.timeline-year {
+  flex: 1;
+  text-align: center;
+  color: gray;
+}
+  
+.timeline-year.active {
+  color: lightgray;
+  font-weight: bold;
+}
+  
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+  
+.image-container .image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+  
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: gray;
+  height: 0.5vw;
+  border-radius: 1vw;
+}
+  
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.2vw;
+  height: 1.2vw;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+}
+  
+input[type="range"]::-moz-range-thumb {
+  width: 1.2vw;
+  height: 1.2vw;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 1.2vw;
+  height: 1.2vw;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+}
+    
+/* hover-box */
+.image-container .image-wrapper .hover-box {
+  position: absolute;
+  border-radius: 5%;
+  top: 10vw;
+  left: 23vw;
+  width: 7.5vw;
+  height: 8vw;
+  padding: 0 1vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2;
+}
+    
+.image-container.year2002 .image-wrapper:hover .hover-box {
+  opacity: 1;
+  top: 12vw;
+  left: 25vw;
+}
+
+.image-container.year2012 .image-wrapper:hover .hover-box {
+  opacity: 1;
+  top: 8vw;
+  left: 29vw;
+}
+
+.image-container.year2022 .image-wrapper:hover .hover-box {
+  opacity: 1;
+  top: 8vw;
+  left: 30vw;
+}
+
+.hover-box h3 {
+  font-size: 1.3vw;
+  margin-top: 0.3vw;
+}
+    
+.image-container {
+  font-size: 1.2vw;
+}
+    
+.hover-item-1,
+.hover-item-2,
+.hover-item-3 {
+  margin: 0;
+}
+    
+.hover-item-1::before {
+  content: "";
+  display: inline-block;
+  width: 0.8vw;
+  height: 0.8vw;
+  background-color: rgb(190, 190, 190, 0.5);
+  border: 0.2vw solid rgb(175, 175, 175);
+  margin-right: 1vw;
+}
+    
+.hover-item-2::before {
+  content: "";
+  display: inline-block;
+  width: 0.8vw;
+  height: 0.8vw;
+  background-color: rgb(255, 255, 225, 0.6);
+  border: 0.2vw solid rgba(255, 255, 225, 1);
+  margin-right: 1vw;
+}
+      
+.hover-item-3::before {
+  content: "";
+  display: inline-block;
+  width: 0.8vw;
+  height: 0.8vw;
+  background-color: rgb(255, 0, 0, 0.5);
+  border: 0.2vw solid rgb(255, 0, 0, 1);
+  margin-right: 1vw;
+}
+      
+/* Legende */
+#legend p {
+  color: rgba(223, 222, 222, 0.9);
+  font-size: 1.1vw;
+}
+  
+#legend {
+  padding-top: 13vw;
+  padding-left: 4vw;
+}
+  
+.legend-item-1::before {
+  content: "";
+  display: inline-block;
+  width: 3vw;
+  height: 0.9vw;
+  background-color: rgb(190, 190, 190, 0.5);
+  border: 0.3vw solid rgb(175, 175, 175);
+  margin-right: 1vw;
+  vertical-align: middle;
+}
+  
+.legend-item-2::before {
+  content: "";
+  display: inline-block;
+  width: 3vw;
+  height: 0.9vw;
+  background-color: rgb(255, 255, 225, 0.6);
+  border: 0.3vw solid rgba(255, 255, 225, 1);
+  margin-right: 1vw;
+  vertical-align: middle;
+}
+  
+.legend-item-3::before {
+  content: "";
+  display: inline-block;
+  width: 3vw;
+  height: 0.9vw;
+  background-color: rgb(255, 0, 0, 0.5);
+  border: 0.3vw solid rgb(255, 0, 0, 1);
+  margin-right: 1vw;
+  vertical-align: middle;
+}
+  
+  
+  
