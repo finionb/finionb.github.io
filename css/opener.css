@@ -1,50 +1,138 @@
-html {
-    background-color: #181818;
+body {
+  background-color: #faf6f6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
+/* Hintergrund */
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Stelle sicher, dass das Hintergrundbild den Container ausfüllt */
-  z-index: -1; /* Stelle sicher, dass das Hintergrundbild hinter den Icons liegt */
+  z-index: -1;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.containerIcons {
-    display: flex;
+/* Navigationsleiste */
+#navigation {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.containerIcons img {
-    margin-bottom: 0;
+#icon img {
+  width: 17%;
+  height: auto;
 }
-  
-  
-.iconPflanze, .iconTier {
-    margin: 40px;
-    padding: 20px;
+
+#navigation #menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-  
-  .iconPflanze:hover, .iconTier:hover{
-    transform: scale(1.1);
-  }
 
-  .iconPflanze {
-    width: 180px;
-    height: 200px;
-  }
+#navigation #menu li {
+  padding-left: 4vw; /* Anpassung der relativen Einheit */
+  padding-right: 1vw; /* Anpassung der relativen Einheit */
+  position: relative;
+}
 
-  .iconTier {
-    width: 200px;
-    height: 180px;
-  }
-  
-  
+#navigation #menu li a {
+  color: white;
+  font-weight: lighter;
+  text-decoration: none;
+  font-size: 1.3vw;
+  position: relative;
+  padding: 0.5vw 1vw; /* Anpassung der relativen Einheit */
+  border-radius: 5vw;
+  transition: background-color 0.05s ease, color 0.05s ease;
+}
+
+#navigation #menu li:hover a,
+#navigation #menu #active a {
+  background-color: rgb(171, 0, 0);
+  text-decoration: none;
+}
+
+/* Titel */
+.text-container {
+  padding-top: 13%;
+  padding-left: 2%;
+}
+
+.text-container .text {
+  line-height: 0.9;
+  z-index: 2;
+  float: left;
+}
+
+.text-container .text .line1 {
+  font-size: 1.5vw;
+  font-weight: lighter;
+  margin-bottom: 0;
+  color: white;
+}
+
+.text-container .text .line2 {
+  font-size: 16vw;
+  color: white;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: -0.5vw;
+}
+
+.text-container .text .line3 {
+  font-size: 1.5vw;
+  color: white;
+  font-weight: 200;
+  margin-left: 0;
+  margin-bottom: 0;
+  letter-spacing: normal;
+}
+
+.text-container .text .line4 {
+  font-size: 3vw;
+  font-weight: bolder;
+  margin-top: 0;
+  letter-spacing: 0.1vw;
+  color: rgb(171, 0, 0);
+}
+
+
+/* Slideshow */
+#slideshow {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
