@@ -60,7 +60,7 @@ body {
   font-size: 1.3vw;
   position: relative;
   padding: 0.5vw 1vw; /* Anpassung der relativen Einheit */
-  border-radius: 16px;
+  border-radius: 5vw;
   transition: background-color 0.05s ease, color 0.05s ease;
 }
 
